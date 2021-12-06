@@ -1,5 +1,5 @@
 ﻿var bingonumbers = new List<int> {13,47,64,52,60,69,80,85,57,1,2,6,30,81,86,40,27,26,97,77,70,92,43,94,8,78,3,88,93,17,55,49,32,59,51,28,33,41,83,67,11,91,53,36,96,7,34,79,98,72,39,56,31,75,82,62,99,66,29,58,9,50,54,12,45,68,4,46,38,21,24,18,44,48,16,61,19,0,90,35,65,37,73,20,22,89,42,23,15,87,74,10,71,25,14,76,84,5,63,95};
-var bingonumbersSample = new List<int> {7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1};
+// var bingonumbersSample = new List<int> {7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1};
 var toProcess = ReadInput("input.txt"); 
 
 var sumOfWinningBoard = SumOfWinningBoard(toProcess, bingonumbers);
@@ -41,7 +41,6 @@ int SumOfLosingBoard(List<int[,]> boards, List<int> bingonumbers)
             }
         }
     }
-
     return -1;
 }
 
@@ -97,7 +96,7 @@ int SumOfUnhitFields(int[,] gameStateBoard, int[,] board)
     for (int i = 0; i < 5; i++)
     {
         for (int j = 0; j < 5; j++)
-        {
+        {            
             if(gameStateBoard[i,j] == 0) {
                 sum += board[i,j];
             }
@@ -144,7 +143,7 @@ bool CheckWinRow(int[,] board, int row) {
 bool CheckWinCol(int[,] board, int col) {
 
     for(int i =0; i < 5; i++)
-    {
+    {        
         if(board[i, col] != 1)  
         {
             return false;
