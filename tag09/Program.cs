@@ -38,10 +38,8 @@ bool isLocalLowpoint(List<int[]> coords, int row, int col)
         bool xyPlus1 = toCheck < coords[row+1][col];             
         return xMinus1 && xyMinus1 && xyPlus1 && xPlus1;
 
-    }
-    // Console.WriteLine($" {toCheck} : {xMinus1} {xyMinus1} {xyPlus1} {xPlus1}");    
+    }    
 }
-
 
 List<int[]> ReadInput(string filename)
 {
